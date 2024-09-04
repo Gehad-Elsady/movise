@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "85523783231",
+    "project_id": "movies-e256e",
+    "storage_bucket": "movies-e256e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85523783231:android:0e44822cb1ed70afdb628a",
+        "android_client_info": {
+          "package_name": "com.example.movise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6oRknZTKNzIs3u5IciQOjKwvMd7QG2FA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

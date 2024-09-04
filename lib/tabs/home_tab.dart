@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movise/Appbar.dart';
-import 'package:movise/New-Realeases-movies.dart';
-import 'package:movise/recommended-movies.dart';
+import 'package:movise/widgets/home/Appbar.dart';
+import 'package:movise/widgets/home/New-Realeases-movies.dart';
+import 'package:movise/widgets/home/recommended-movies.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});

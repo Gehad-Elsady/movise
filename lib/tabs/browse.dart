@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movise/Api-Manegar.dart';
 import 'package:movise/Models/catrgory-model.dart';
-import 'package:movise/category-item.dart';
-import 'package:movise/categorydetelis.dart';
+import 'package:movise/widgets/browse/category-item.dart';
+import 'package:movise/widgets/browse/categorydetelis.dart';
 
 class Browse extends StatefulWidget {
   const Browse({super.key});

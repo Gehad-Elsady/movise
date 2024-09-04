@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:movise/Models/popularMoviesResponse%20.dart';
+import 'package:movise/Models/search_model.dart';
 
-class MoviesItem extends StatefulWidget {
-  final Results model;
-  Function callBack;
-  MoviesItem({required this.model, required this.callBack, super.key});
+class SearchMoviesItem extends StatefulWidget {
+  final SearchModel model;
+  final VoidCallback callBack;
+
+  SearchMoviesItem({required this.model, required this.callBack, super.key});
 
   @override
-  State<MoviesItem> createState() => _MoviesItemState();
+  State<SearchMoviesItem> createState() => _MoviesItemState();
 }
 
-class _MoviesItemState extends State<MoviesItem> {
+class _MoviesItemState extends State<SearchMoviesItem> {
   bool isBookmarked = false;
 
   @override
@@ -18,8 +19,9 @@ class _MoviesItemState extends State<MoviesItem> {
     return Container(
       width: 120,
       decoration: BoxDecoration(
-          color: const Color(0XFF343534),
-          borderRadius: BorderRadius.circular(8)),
+        color: const Color(0XFF343534),
+        borderRadius: BorderRadius.circular(8),
+      ),
       margin: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -36,10 +38,12 @@ class _MoviesItemState extends State<MoviesItem> {
                     topRight: Radius.circular(8.0),
                   ),
                   child: Image.network(
-                    'https://image.tmdb.org/t/p/w500${widget.model.posterPath}',
+                    widget.model.posterPath != null
+                        ? 'https://image.tmdb.org/t/p/w500${widget.model.posterPath}'
+                        : "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
                     fit: BoxFit.cover,
                     width: double.infinity,
-                    height: 170, // Adjust the height as necessary
+                    height: 170,
                   ),
                 ),
               ),
@@ -52,9 +56,11 @@ class _MoviesItemState extends State<MoviesItem> {
                   print(
                       '${widget.model.originalTitle} is bookmarked: $isBookmarked');
                 },
-                child: Image.asset(isBookmarked
-                    ? 'assets/images/bookmark.png'
-                    : 'assets/images/bookmark-add.png'),
+                child: Image.asset(
+                  isBookmarked
+                      ? 'assets/images/bookmark.png'
+                      : 'assets/images/bookmark-add.png',
+                ),
               ),
             ],
           ),
@@ -64,7 +70,6 @@ class _MoviesItemState extends State<MoviesItem> {
           Padding(
             padding: const EdgeInsets.only(left: 6.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Row(
@@ -82,16 +87,18 @@ class _MoviesItemState extends State<MoviesItem> {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400),
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
                 Text(
-                  widget.model.releaseDate!.substring(0, 4),
+                  widget.model.releaseDate!,
                   style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400),
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ],
             ),

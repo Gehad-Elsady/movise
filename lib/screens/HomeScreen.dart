@@ -5,7 +5,7 @@ import 'package:movise/tabs/home_tab.dart';
 import 'package:movise/tabs/search_tab.dart';
 import 'package:movise/tabs/watch_list_tab.dart';
 
-import 'app_color.dart';
+import '../theme/app_color.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'Home Screen';
