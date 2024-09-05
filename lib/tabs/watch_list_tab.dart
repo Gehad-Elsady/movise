@@ -33,12 +33,12 @@ class WatchListTab extends StatelessWidget {
             )
             .toList();
         return Container(
-          padding: EdgeInsets.only(left: 15, bottom: 17),
           margin: EdgeInsets.zero,
           color: Color(0xff282A28),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              SizedBox(height: 30),
               Padding(
                 padding: EdgeInsets.only(
                   top: 11,
@@ -46,7 +46,7 @@ class WatchListTab extends StatelessWidget {
                   left: 10,
                 ),
                 child: Text(
-                  "More Like Movies",
+                  "Watchlist",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -54,17 +54,18 @@ class WatchListTab extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
+              // SizedBox(height: 15),
               Expanded(
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     mainAxisSpacing: 20,
-                    childAspectRatio: 4 / 8,
+                    childAspectRatio: 4 / 7,
                   ),
                   itemCount: movies!.length,
                   itemBuilder: (context, index) {
                     return MoviesItem(
+                      isBooked: true,
                       model: movies[index],
                       callBack: () {},
                     );

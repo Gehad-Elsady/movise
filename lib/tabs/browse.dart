@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movise/Api-Manegar.dart';
 import 'package:movise/Models/catrgory-model.dart';
+import 'package:movise/theme/app_color.dart';
 import 'package:movise/widgets/browse/category-item.dart';
 import 'package:movise/widgets/browse/categorydetelis.dart';
 
@@ -17,7 +17,7 @@ class _BrowseState extends State<Browse> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff121312),
+      backgroundColor: AppColors.ScaffoldClore,
       body: Padding(
         padding: const EdgeInsets.all(17.0),
         child: Column(
@@ -31,7 +31,7 @@ class _BrowseState extends State<Browse> {
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: AppColors.white,
               ),
             ),
             Expanded(
