@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movise/Api-Manegar.dart';
 import 'package:movise/Models/popularMoviesResponse%20.dart';
+import 'package:movise/theme/app_color.dart';
 import 'package:movise/widgets/movies/SimilarMovies.dart';
 import 'package:movise/widgets/movies/moviesdetelis.dart';
 import 'package:movise/widgets/movies/trailer.dart';
@@ -27,13 +27,13 @@ class _MoviesDetailsState extends State<MoviesDetails> {
     var model = ModalRoute.of(context)?.settings.arguments as Results;
 
     return Scaffold(
-      backgroundColor: Color(0xff121312),
+      backgroundColor: AppColors.ScaffoldClore,
       appBar: AppBar(
         title: Text(
           model.originalTitle ?? "",
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.white,
+            color: AppColors.white,
             fontSize: 25,
           ),
         ),

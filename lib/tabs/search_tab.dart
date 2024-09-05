@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movise/Api-Manegar.dart';
+import 'package:movise/api/Api-Manegar.dart';
 import 'package:movise/Models/search_model.dart';
+import 'package:movise/theme/app_color.dart';
 import 'package:movise/widgets/search/search_movies_item.dart';
 
 class SearchTab extends StatefulWidget {
@@ -16,7 +17,7 @@ class _SearchTabState extends State<SearchTab> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xff121312),
+      color: AppColors.ScaffoldClore,
       child: Column(
         children: [
           Padding(
@@ -44,7 +45,7 @@ class _SearchTabState extends State<SearchTab> {
                 labelStyle: TextStyle(color: Color(0xff908f8f)),
                 prefixIcon: Icon(
                   Icons.search,
-                  color: Colors.white,
+                  color: AppColors.white,
                 ),
               ),
             ),

@@ -1,16 +1,12 @@
 import 'dart:convert';
-import 'dart:ffi';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:movise/Bloc/browes/browes-states.dart';
 import 'package:movise/Bloc/movies/movise-states.dart';
 import 'package:movise/Models/MoviesDetelisRespons%20.dart';
 import 'package:movise/Models/SimilarDetelisRespons.dart';
-import 'package:movise/Models/SpecificCategoryResponse.dart';
 import 'package:movise/Models/TrailerDetelisRespons%20.dart';
 import 'package:movise/constants/constants.dart';
 

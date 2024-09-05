@@ -38,6 +38,7 @@ class WatchListTab extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              SizedBox(height: 30),
               Padding(
                 padding: EdgeInsets.only(
                   top: 11,
@@ -45,7 +46,7 @@ class WatchListTab extends StatelessWidget {
                   left: 10,
                 ),
                 child: Text(
-                  "More Like Movies",
+                  "Watchlist",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -53,7 +54,7 @@ class WatchListTab extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
+              // SizedBox(height: 15),
               Expanded(
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

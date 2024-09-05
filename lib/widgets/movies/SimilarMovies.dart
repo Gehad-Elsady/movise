@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movise/Api-Manegar.dart';
 import 'package:movise/Bloc/movies/movies-cubit.dart';
 import 'package:movise/Bloc/movies/movise-states.dart';
 import 'package:movise/widgets/movies/moviesitem.dart';
