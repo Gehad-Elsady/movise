@@ -33,7 +33,7 @@ class CustomAppBar extends StatelessWidget {
                           Image.network(
                             height: 220,
                             width: double.infinity,
-                            'https://image.tmdb.org/t/p/w500${cubit.popularResponse!.results![index].posterPath}',
+                            'https://image.tmdb.org/t/p/w500${cubit.popularResponse!.results![index].backdropPath}',
                             fit: BoxFit.cover,
                             errorBuilder: (context, error, stackTrace) =>
                                 Container(

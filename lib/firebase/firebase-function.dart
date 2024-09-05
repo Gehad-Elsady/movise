@@ -26,4 +26,8 @@ class FirebaseFunctions {
     var collection = getTasksCollection();
     return collection.snapshots();
   }
+
+  static Future<void> deleteTask(String id) {
+    return getTasksCollection().doc(id).delete();
+  }
 }

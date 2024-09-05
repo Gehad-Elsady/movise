@@ -33,7 +33,6 @@ class WatchListTab extends StatelessWidget {
             )
             .toList();
         return Container(
-          padding: EdgeInsets.only(left: 15, bottom: 17),
           margin: EdgeInsets.zero,
           color: Color(0xff282A28),
           child: Column(
@@ -60,11 +59,12 @@ class WatchListTab extends StatelessWidget {
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     mainAxisSpacing: 20,
-                    childAspectRatio: 4 / 8,
+                    childAspectRatio: 4 / 7,
                   ),
                   itemCount: movies!.length,
                   itemBuilder: (context, index) {
                     return MoviesItem(
+                      isBooked: true,
                       model: movies[index],
                       callBack: () {},
                     );
